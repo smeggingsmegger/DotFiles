@@ -113,6 +113,9 @@ function chpwd() {
     fi
 }
 
+# If a home venv exists, turn it on
+[[ -d ~/.venv  ]] && . ~/.venv/bin/activate
+
 # Serve HTML Directory at specified port (8000 is the default)
 function serve() {
     pushd $1
