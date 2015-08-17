@@ -27,6 +27,8 @@ Plug 'mhinz/vim-startify'
 Plug 'chriskempson/base16-vim'
 " Lots of non-base16 colorschemes to choose from as well.
 Plug 'smeggingsmegger/vim-colorschemes'
+" I prefer tagbar
+Plug 'majutsushi/tagbar', { 'on':  'TagbarToggle' }
 " Tim Pope Time
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-fugitive'
@@ -124,7 +126,7 @@ nnoremap <Leader>c :close<CR>
 nnoremap <Leader>w :write<CR>
 nnoremap <Leader>q :quit!<CR>
 nnoremap <Leader>d :bdelete!<CR>
-nnoremap <Leader>. :only<CR>
+" nnoremap <Leader>. :only<CR>
 nnoremap <C-j> i<CR><Esc>
 " Arrow heresy
 nnoremap <S-Down> 10j
@@ -138,6 +140,8 @@ nnoremap <Leader>tc :tabc<return>
 nnoremap <Leader>tn :tabn<return>
 nnoremap <Leader>tp :tabp<return>
 nnoremap <Leader>te :tabe<space>
+" Add Tagbar Toggle
+nnoremap <Leader>tb :TagbarToggle<return>
 " Fix whitespace issues
 nnoremap <Leader>ws :TrimWS<return>
 nnoremap <Leader>rt gg=G
@@ -183,6 +187,12 @@ augroup END
 " Trim trailing whitespace
 command! TrimWS %s/\s*$//g | noh
 
+" Clear highlighting
+nnoremap <Leader>ch :noh<return>
+" Insert a line above or below cursor without insert mode.
+nnoremap <Leader>O O<Esc>
+nnoremap <Leader>o o<Esc>
+
 " ===================
 " Startify settings
 " ===================
@@ -216,13 +226,6 @@ let g:NeatStatusLine_color_modified = 'guifg=#f1efee guibg=#c33ff3 gui=NONE cter
 let g:NeatStatusLine_color_line     = 'guifg=#6666ea guibg=#1b1918 gui=NONE ctermfg=5  ctermbg=0  cterm=NONE'
 let g:NeatStatusLine_color_filetype = 'guifg=#f1efee guibg=#00ad9c gui=NONE ctermfg=15 ctermbg=6  cterm=NONE'
 
-" ===================
-" Syntastic Settings
-" ===================
-
-" let g:syntastic_check_on_open=1 " Run Syntastic when opening files
-" let g:syntastic_python_checkers=['python', 'pyflakes'] " Be more strict in python syntax
-
 " ===========================
 " Neomake Settings & Mappings
 " ===========================
@@ -252,14 +255,15 @@ call unite#custom#profile('default', 'context', {
 \   'start_insert': 1,
 \   'winheight': 10
 \ })
-nnoremap <Leader>t :Unite -buffer-name=files   -start-insert file_rec/async:!<CR>
+nnoremap <Leader>T :Unite -buffer-name=files   -start-insert file_rec/async:!<CR>
 nnoremap <Leader>r :Unite -buffer-name=tags    -start-insert tag<CR>
 nnoremap <Leader>/ :Unite -buffer-name=grep    -start-insert -no-quit grep<CR>
 nnoremap <Leader>? :UniteWithCursorWord -buffer-name=grep    -no-quit grep<CR>
 nnoremap <Leader>f :Unite -buffer-name=files   -start-insert file<CR>
 nnoremap <Leader>F :Unite -buffer-name=files   -start-insert file/new<CR>
 nnoremap <Leader>u :Unite -buffer-name=mru     -start-insert file_mru<CR>
-nnoremap <Leader>o :Unite -buffer-name=outline -start-insert outline<CR>
+nnoremap <Leader>tb :Unite -buffer-name=outline -vertical -direction=botright outline<CR>
+nnoremap <Leader>. :Unite -buffer-name=outline -start-insert outline<CR>
 nnoremap <Leader>L :Unite -buffer-name=buffer  -start-insert buffer<CR>
 nnoremap <Leader>l :Unite -buffer-name=buffer  -quick-match  buffer<CR>
 nnoremap <Leader>y :Unite -buffer-name=yank    history/yank<CR>
