@@ -14,10 +14,64 @@ alias cask_list="brew cask list"
 # Set up haste to use our BriteCore server
 alias work_haste='HASTE_SERVER=http://hastebin.britecorepro.com haste'
 
-alias bc='cd ~/repos/BriteCore/'
-
 # Better ls alias for Mac
 alias ls='ls -GpFh'
+
+alias fixtime='boot2docker ssh sudo ntpclient -s -h us.pool.ntp.org'
+
+function macvim () { open -a /Applications/MacVim.app $1 }
+
+# devbrite Functions / Aliases
+alias bc='cd ~/repos/BriteCore/'
+
+function git_branch_name () {
+    git rev-parse --symbolic-full-name --abbrev-ref HEAD
+}
+function git_clean_branch_name () {
+    git_branch_name | tr -cd '[[:alnum:]]'
+}
+function dbw () {
+    bc
+    if (( $# == 0  )) { machine=$(git_clean_branch_name) } else { machine=$1 }
+    devbrite workon $machine
+}
+function dbr () {
+    bc
+    if (( $# == 0  )) { machine=$(git_clean_branch_name) } else { machine=$1 }
+    devbrite restart $machine
+}
+function dbstart () {
+    bc
+    if (( $# == 0  )) { machine=$(git_clean_branch_name) } else { machine=$1 }
+    devbrite start $machine
+}
+function dbstop () {
+    bc
+    if (( $# == 0  )) { machine=$(git_clean_branch_name) } else { machine=$1 }
+    devbrite stop $machine
+}
+function dbsp () {
+    bc
+    if (( $# == 0  )) { machine=$(git_clean_branch_name) } else { machine=$1 }
+    dbw
+    devbrite sequelpro $machine
+}
+function dbb () {
+    bc
+    if (( $# == 0  )) { machine=$(git_clean_branch_name) } else { machine=$1 }
+    dbw
+    devbrite browse $machine
+}
+function dbdel () {
+    bc
+    if (( $# == 0  )) { machine=$(git_clean_branch_name) } else { machine=$1 }
+    devbrite delete $machine
+}
+function dbc () {
+    bc
+    machine=$(git_clean_branch_name)
+    devbrite create -w $machine $1
+}
 
 PLUGINS=('vagrant' 'brew')
 source "$ZSH_DIR/common.zsh"

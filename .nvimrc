@@ -54,7 +54,8 @@ Plug 'Shougo/neomru.vim'     " Most recently used
 Plug 'Shougo/unite-outline'  " Function/Class Outline
 Plug 'tsukkee/unite-tag'     " Search ctags
 " Dark-powered Auto completion
-Plug 'Shougo/deoplete.nvim'
+" Plug 'Shougo/deoplete.nvim'
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'Shougo/neosnippet.vim' | Plug 'Shougo/neosnippet-snippets'
 " Notice Git File changes
 Plug 'airblade/vim-gitgutter'
@@ -179,6 +180,8 @@ augroup dotvimrc
   au! BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") && &filetype != 'gitcommit'
         \| exe "normal! g'\"" | endif
 augroup END
+
+au Filetype python setl et ts=4 sw=4
 
 " ===================
 " Custom Functions
