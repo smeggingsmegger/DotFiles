@@ -35,7 +35,7 @@ function dbw () {
     if (( $# == 0  )) { machine=$(git_clean_branch_name) } else { machine=$1 }
     devbrite workon $machine
 }
-function dbr () {
+function dbrestart () {
     bc
     if (( $# == 0  )) { machine=$(git_clean_branch_name) } else { machine=$1 }
     devbrite restart $machine
@@ -62,6 +62,12 @@ function dbb () {
     dbw
     devbrite browse $machine
 }
+function dbe () {
+    bc
+    if (( $# == 0  )) { machine=$(git_clean_branch_name) } else { machine=$1 }
+    dbw
+    devbrite enter $machine webserver
+}
 function dbdel () {
     bc
     if (( $# == 0  )) { machine=$(git_clean_branch_name) } else { machine=$1 }
@@ -69,8 +75,32 @@ function dbdel () {
 }
 function dbc () {
     bc
+    fixtime
     machine=$(git_clean_branch_name)
     devbrite create -w $machine $1
+}
+function dbn () {
+    bc
+    fixtime
+    machine=$(git_clean_branch_name)
+    devbrite nuke
+}
+function dbrun () {
+    bc
+    if (( $# == 1  )) {
+        machine=$(git_clean_branch_name)
+        container='webserver'
+        command=$1
+    } elif (( $# == 2  )) {
+        machine=$(git_clean_branch_name)
+        container=$1
+        command=$2
+    } else {
+        machine=$1
+        container=$2
+        command=$3
+    }
+    devbrite run $machine $container $command
 }
 
 PLUGINS=('vagrant' 'brew')
