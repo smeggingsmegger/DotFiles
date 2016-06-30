@@ -1,0 +1,131 @@
+{
+	"__metadata": {
+		"galleryApiUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
+		"id": "8a0c151b-eb13-4bed-9d49-4a252a118a0c",
+		"publisherId": "81220008-de86-48d4-9d4a-a5f250aaee57",
+		"publisherDisplayName": "michelemelluso",
+		"installCount": 2909,
+		"versions": [
+			{
+				"version": "0.6.1",
+				"date": "2016-05-06T09:30:51.133Z",
+				"downloadHeaders": {
+					"X-Market-Client-Id": "VSCode 1.2.1",
+					"User-Agent": "VSCode 1.2.1",
+					"X-Market-User-Id": "6cb2b98c8fbf56d3f283bac4a2ce20d637803824bfa7e6ba031ea94687de77eb"
+				},
+				"downloadUrl": "https://michelemelluso.gallery.vsassets.io/_apis/public/gallery/publisher/michelemelluso/extension/code-beautifier/0.6.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?install=true",
+				"manifestUrl": "https://michelemelluso.gallery.vsassets.io/_apis/public/gallery/publisher/michelemelluso/extension/code-beautifier/0.6.1/assetbyname/Microsoft.VisualStudio.Code.Manifest"
+			},
+			{
+				"version": "0.6.0",
+				"date": "2016-04-20T07:34:25.81Z",
+				"downloadHeaders": {
+					"X-Market-Client-Id": "VSCode 1.2.1",
+					"User-Agent": "VSCode 1.2.1",
+					"X-Market-User-Id": "6cb2b98c8fbf56d3f283bac4a2ce20d637803824bfa7e6ba031ea94687de77eb"
+				},
+				"downloadUrl": "https://michelemelluso.gallery.vsassets.io/_apis/public/gallery/publisher/michelemelluso/extension/code-beautifier/0.6.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?install=true",
+				"manifestUrl": "https://michelemelluso.gallery.vsassets.io/_apis/public/gallery/publisher/michelemelluso/extension/code-beautifier/0.6.0/assetbyname/Microsoft.VisualStudio.Code.Manifest"
+			},
+			{
+				"version": "0.5.0",
+				"date": "2016-04-19T15:40:57.813Z",
+				"downloadHeaders": {
+					"X-Market-Client-Id": "VSCode 1.2.1",
+					"User-Agent": "VSCode 1.2.1",
+					"X-Market-User-Id": "6cb2b98c8fbf56d3f283bac4a2ce20d637803824bfa7e6ba031ea94687de77eb"
+				},
+				"downloadUrl": "https://michelemelluso.gallery.vsassets.io/_apis/public/gallery/publisher/michelemelluso/extension/code-beautifier/0.5.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?install=true",
+				"manifestUrl": "https://michelemelluso.gallery.vsassets.io/_apis/public/gallery/publisher/michelemelluso/extension/code-beautifier/0.5.0/assetbyname/Microsoft.VisualStudio.Code.Manifest"
+			},
+			{
+				"version": "0.4.0",
+				"date": "2016-04-19T15:09:12.37Z",
+				"downloadHeaders": {
+					"X-Market-Client-Id": "VSCode 1.2.1",
+					"User-Agent": "VSCode 1.2.1",
+					"X-Market-User-Id": "6cb2b98c8fbf56d3f283bac4a2ce20d637803824bfa7e6ba031ea94687de77eb"
+				},
+				"downloadUrl": "https://michelemelluso.gallery.vsassets.io/_apis/public/gallery/publisher/michelemelluso/extension/code-beautifier/0.4.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?install=true",
+				"manifestUrl": "https://michelemelluso.gallery.vsassets.io/_apis/public/gallery/publisher/michelemelluso/extension/code-beautifier/0.4.0/assetbyname/Microsoft.VisualStudio.Code.Manifest"
+			},
+			{
+				"version": "0.3.0",
+				"date": "2016-04-19T13:55:40.05Z",
+				"downloadHeaders": {
+					"X-Market-Client-Id": "VSCode 1.2.1",
+					"User-Agent": "VSCode 1.2.1",
+					"X-Market-User-Id": "6cb2b98c8fbf56d3f283bac4a2ce20d637803824bfa7e6ba031ea94687de77eb"
+				},
+				"downloadUrl": "https://michelemelluso.gallery.vsassets.io/_apis/public/gallery/publisher/michelemelluso/extension/code-beautifier/0.3.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?install=true",
+				"manifestUrl": "https://michelemelluso.gallery.vsassets.io/_apis/public/gallery/publisher/michelemelluso/extension/code-beautifier/0.3.0/assetbyname/Microsoft.VisualStudio.Code.Manifest"
+			},
+			{
+				"version": "0.2.0",
+				"date": "2016-04-19T13:16:58.083Z",
+				"downloadHeaders": {
+					"X-Market-Client-Id": "VSCode 1.2.1",
+					"User-Agent": "VSCode 1.2.1",
+					"X-Market-User-Id": "6cb2b98c8fbf56d3f283bac4a2ce20d637803824bfa7e6ba031ea94687de77eb"
+				},
+				"downloadUrl": "https://michelemelluso.gallery.vsassets.io/_apis/public/gallery/publisher/michelemelluso/extension/code-beautifier/0.2.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?install=true",
+				"manifestUrl": "https://michelemelluso.gallery.vsassets.io/_apis/public/gallery/publisher/michelemelluso/extension/code-beautifier/0.2.0/assetbyname/Microsoft.VisualStudio.Code.Manifest"
+			},
+			{
+				"version": "0.1.0",
+				"date": "2016-04-19T12:31:58.953Z",
+				"downloadHeaders": {
+					"X-Market-Client-Id": "VSCode 1.2.1",
+					"User-Agent": "VSCode 1.2.1",
+					"X-Market-User-Id": "6cb2b98c8fbf56d3f283bac4a2ce20d637803824bfa7e6ba031ea94687de77eb"
+				},
+				"downloadUrl": "https://michelemelluso.gallery.vsassets.io/_apis/public/gallery/publisher/michelemelluso/extension/code-beautifier/0.1.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?install=true",
+				"manifestUrl": "https://michelemelluso.gallery.vsassets.io/_apis/public/gallery/publisher/michelemelluso/extension/code-beautifier/0.1.0/assetbyname/Microsoft.VisualStudio.Code.Manifest"
+			}
+		]
+	},
+	"name": "code-beautifier",
+	"displayName": "Code Beautifier",
+	"description": "Beautify html, js, css, sass and less code (extension for Visual Studio Code)",
+	"version": "0.6.1",
+	"publisher": "michelemelluso",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://gitlab.com/michele-jr-melluso/code-beautifier/issues",
+		"email": "michele.jr.melluso@gmail.com"
+	},
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Languages"
+	],
+	"activationEvents": [
+		"onLanguage:javascript",
+		"onLanguage:javascriptreact",
+		"onCommand:beautify.format"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "beautify.format",
+				"title": "Beautify Code"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"js-beautify": "^1.6.2",
+		"standard-format": "^2.1.1"
+	},
+	"devDependencies": {
+		"typescript": "^1.8.10",
+		"vscode": "^0.11.12"
+	}
+}

@@ -1,0 +1,25 @@
+# Change Log
+
+## [0.6.1](https://gitlab.com/michele-jr-melluso/code-beautifier/commit/5b7009eccfee24a59dd698fdc4ec05273c39c2f1) (2016-05-06)
+
+**Implemented enhancements:**
+
+- Increase vscode version
+
+## [0.6.0](https://gitlab.com/michele-jr-melluso/code-beautifier/commit/21037c81cac94a7f07f7a29266faea5261539d58) (2016-04-20)
+
+**Implemented enhancements:**
+
+- Fix js-beautify library (Typescript Typings)
+
+## [0.5.0](https://gitlab.com/michele-jr-melluso/code-beautifier/commit/b58e5bef7cb91127d2cb0d0fa28b7c329f93fad6) (2016-04-19)
+
+**Implemented enhancements:**
+
+- Remove error message
+
+## [0.4.0](https://gitlab.com/michele-jr-melluso/code-beautifier/commit/6b63140b5f03186eaf982a669ebf878735716f87) (2016-04-19)
+
+**Implemented enhancements:**
+
+- Add Typescript support

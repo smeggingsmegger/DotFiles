@@ -1,0 +1,71 @@
+{
+	"__metadata": {
+		"galleryApiUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
+		"id": "c82c8b78-24bf-40c4-a27e-cf9b3e07a81c",
+		"publisherId": "bceeeef9-2fcb-4ba0-a6a5-d9a35246dfd8",
+		"publisherDisplayName": "benfahrenheit",
+		"installCount": 229,
+		"versions": [
+			{
+				"version": "0.0.2",
+				"date": "2016-03-13T16:07:25.87Z",
+				"downloadHeaders": {
+					"X-Market-Client-Id": "VSCode 1.2.1",
+					"User-Agent": "VSCode 1.2.1",
+					"X-Market-User-Id": "6cb2b98c8fbf56d3f283bac4a2ce20d637803824bfa7e6ba031ea94687de77eb"
+				},
+				"downloadUrl": "https://benfahrenheit.gallery.vsassets.io/_apis/public/gallery/publisher/benfahrenheit/extension/vscode-surround/0.0.2/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?install=true",
+				"manifestUrl": "https://benfahrenheit.gallery.vsassets.io/_apis/public/gallery/publisher/benfahrenheit/extension/vscode-surround/0.0.2/assetbyname/Microsoft.VisualStudio.Code.Manifest"
+			},
+			{
+				"version": "0.0.1",
+				"date": "2016-03-13T16:03:51.573Z",
+				"downloadHeaders": {
+					"X-Market-Client-Id": "VSCode 1.2.1",
+					"User-Agent": "VSCode 1.2.1",
+					"X-Market-User-Id": "6cb2b98c8fbf56d3f283bac4a2ce20d637803824bfa7e6ba031ea94687de77eb"
+				},
+				"downloadUrl": "https://benfahrenheit.gallery.vsassets.io/_apis/public/gallery/publisher/benfahrenheit/extension/vscode-surround/0.0.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?install=true",
+				"manifestUrl": "https://benfahrenheit.gallery.vsassets.io/_apis/public/gallery/publisher/benfahrenheit/extension/vscode-surround/0.0.1/assetbyname/Microsoft.VisualStudio.Code.Manifest"
+			}
+		]
+	},
+	"name": "vscode-surround",
+	"displayName": "Surround",
+	"description": "A port of tpope's vim-surround to vscode",
+	"version": "0.0.2",
+	"publisher": "benfahrenheit",
+	"icon": "assets/icon.png",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/benfahrenheit/vscode-surround"
+	},
+	"engines": {
+		"vscode": "^0.10.10"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.swapQuotes"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.swapQuotes",
+				"title": "Swap single/double quotes"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"typescript": "^1.8.5",
+		"vscode": "^0.11.0"
+	}
+}

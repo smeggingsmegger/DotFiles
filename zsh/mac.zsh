@@ -103,6 +103,31 @@ function dbrun () {
     devbrite run $machine $container $command
 }
 
+function setup-vm () {
+    brew install ssh-copy-id
+    ssh-copy-id -p2222 vagrant@127.0.0.1
+}
+
+function vm () {
+    ssh -p2222 vagrant@127.0.0.1
+}
+
+function uuid () {
+    python -c 'from uuid import uuid4;print(str(uuid4()))'
+}
+
+function delpyc () {
+    find . -name \*.pyc -delete
+}
+
+function deldocker () {
+    docker rm -f $(docker ps -a -q)
+}
+
+function looptest() {
+    for ((n=0;n<$1;n++)); do ./run_tests.py -sxv $2; done;
+}
+
 PLUGINS=('vagrant' 'brew')
 source "$ZSH_DIR/common.zsh"
 $(boot2docker shellinit 2>/dev/null)

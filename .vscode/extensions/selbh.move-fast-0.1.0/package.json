@@ -1,0 +1,117 @@
+{
+	"__metadata": {
+		"galleryApiUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
+		"id": "734977ac-a4bc-451a-9f17-46a2dc3c3e94",
+		"publisherId": "89fa5904-cde3-47b7-a49c-ee217a50b18a",
+		"publisherDisplayName": "Szymon",
+		"installCount": 175,
+		"versions": [
+			{
+				"version": "0.1.0",
+				"date": "2015-12-01T10:32:52.387Z",
+				"downloadHeaders": {
+					"X-Market-Client-Id": "VSCode 1.2.1",
+					"User-Agent": "VSCode 1.2.1",
+					"X-Market-User-Id": "6cb2b98c8fbf56d3f283bac4a2ce20d637803824bfa7e6ba031ea94687de77eb"
+				},
+				"downloadUrl": "https://selbh.gallery.vsassets.io/_apis/public/gallery/publisher/selbh/extension/move-fast/0.1.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?install=true",
+				"manifestUrl": "https://selbh.gallery.vsassets.io/_apis/public/gallery/publisher/selbh/extension/move-fast/0.1.0/assetbyname/Microsoft.VisualStudio.Code.Manifest"
+			},
+			{
+				"version": "0.0.1",
+				"date": "2015-11-28T21:05:22.903Z",
+				"downloadHeaders": {
+					"X-Market-Client-Id": "VSCode 1.2.1",
+					"User-Agent": "VSCode 1.2.1",
+					"X-Market-User-Id": "6cb2b98c8fbf56d3f283bac4a2ce20d637803824bfa7e6ba031ea94687de77eb"
+				},
+				"downloadUrl": "https://selbh.gallery.vsassets.io/_apis/public/gallery/publisher/selbh/extension/move-fast/0.0.1/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?install=true",
+				"manifestUrl": "https://selbh.gallery.vsassets.io/_apis/public/gallery/publisher/selbh/extension/move-fast/0.0.1/assetbyname/Microsoft.VisualStudio.Code.Manifest"
+			},
+			{
+				"version": "0.0.0",
+				"date": "2015-12-01T10:30:33.67Z",
+				"downloadHeaders": {
+					"X-Market-Client-Id": "VSCode 1.2.1",
+					"User-Agent": "VSCode 1.2.1",
+					"X-Market-User-Id": "6cb2b98c8fbf56d3f283bac4a2ce20d637803824bfa7e6ba031ea94687de77eb"
+				},
+				"downloadUrl": "https://selbh.gallery.vsassets.io/_apis/public/gallery/publisher/selbh/extension/move-fast/0.0.0/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage?install=true",
+				"manifestUrl": "https://selbh.gallery.vsassets.io/_apis/public/gallery/publisher/selbh/extension/move-fast/0.0.0/assetbyname/Microsoft.VisualStudio.Code.Manifest"
+			}
+		]
+	},
+	"name": "move-fast",
+	"displayName": "move-fast",
+	"description": "Move up and down by 5 lines with ctrl+up and ctrl+down",
+	"version": "0.1.0",
+	"publisher": "selbh",
+	"license": "ISC",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:moveFast.up",
+		"onCommand:moveFast.down",
+		"onCommand:moveFast.upSelect",
+		"onCommand:moveFast.downSelect"
+	],
+	"main": "./out/src/move-fast",
+	"contributes": {
+		"commands": [
+			{
+				"command": "moveFast.up",
+				"title": "Move fast up"
+			},
+			{
+				"command": "moveFast.down",
+				"title": "Move fast down"
+			},
+			{
+				"command": "moveFast.upSelect",
+				"title": "Move fast up and select"
+			},
+			{
+				"command": "moveFast.downSelect",
+				"title": "Move fast down and select"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "moveFast.up",
+				"key": "ctrl+up",
+				"mac": "ctrl+up",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "moveFast.down",
+				"key": "ctrl+down",
+				"mac": "ctrl+down",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "moveFast.upSelect",
+				"key": "ctrl+shift+up",
+				"mac": "ctrl+shift+up",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "moveFast.downSelect",
+				"key": "ctrl+shift+down",
+				"mac": "ctrl+shift+down",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+	},
+	"devDependencies": {
+		"typescript": "^1.6.2",
+		"vscode": "0.10.x"
+	}
+}

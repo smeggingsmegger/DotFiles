@@ -1,7 +1,6 @@
 [user]
-    name = YourName
 	email = sblevins@gmail.com
-	name = Scott Blevins
+	name = Scott
 
 [color]
     ui = true
@@ -9,6 +8,7 @@
 [core]
     excludesfile = ~/.gitignore_global
     attributesfile = ~/.gitattributes_global
+	autocrlf = input
 
 [push]
     default = nothing
