@@ -124,8 +124,27 @@ function deldocker () {
     docker rm -f $(docker ps -a -q)
 }
 
-function looptest() {
+function looptest () {
     for ((n=0;n<$1;n++)); do ./run_tests.py -sxv $2; done;
+}
+
+function build_wheel () {
+    virtualenv /tmp/venv
+    /tmp/venv/bin/pip wheel -w /tmp/w1 $1
+    aws s3 sync --dryrun /tmp/w1/ s3://britecore-pip/wheelhouse/
+    aws s3 sync /tmp/w1/ s3://britecore-pip/wheelhouse/
+}
+
+function docbranch () {
+    git stash
+    make doc
+    git checkout gh-pages
+    git clean -fd
+    cp -rf ~/git/docs-pywebrunner/html/* .
+}
+
+function replaceall () {
+    find . -type f -exec sed -i "s/$1/$2/g" {} +
 }
 
 PLUGINS=('vagrant' 'brew')
